@@ -1,10 +1,9 @@
 {
   "name": "angular-toastr",
-  "version": "2.1.1",
-  "author": "Jesus Rodriguez <Foxandxss@gmail.com>",
+  "version": "2.1.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foxandxss/angular-toastr.git"
+    "url": "https://github.com/CSM-Consulting/angular-toastr.git"
   },
   "main": "index.js",
   "keywords": [

@@ -79,13 +79,13 @@
       if (toast && ! toast.deleting) { // Avoid clicking when fading out
         toast.deleting = true;
         toast.isOpened = false;
+        delete openToasts[toast.scope.message];
         $animate.leave(toast.el).then(function() {
           if (toast.scope.options.onHidden) {
             toast.scope.options.onHidden(!!wasClicked, toast);
           }
           toast.scope.$destroy();
           var index = toasts.indexOf(toast);
-          delete openToasts[toast.scope.message];
           toasts.splice(index, 1);
           var maxOpened = toastrConfig.maxOpened;
           if (maxOpened && toasts.length >= maxOpened) {
